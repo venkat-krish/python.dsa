@@ -4,12 +4,7 @@ class Node:
     def __init__(self, data):
         self.data = data
         self.next = None
-
-class DoubleNode:
-    def __init__(self, data):
-        self.data = data
         self.prev = None
-        self.next = None
 
 class SinglyLinkedList:
     def __init__(self):
@@ -110,7 +105,7 @@ class DoublyLinkedList:
         :param data:
         :return:
         '''
-        new_node = DoubleNode(data)
+        new_node = Node(data)
         if self.head == None:
             self.head = new_node
             self.tail = new_node
