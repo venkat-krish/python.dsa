@@ -39,6 +39,7 @@ if __name__ == '__main__':
 
     for i in data:
         doubly_linkedlist.add(i)
+    print(f'Size of the list {doubly_linkedlist.length}')
 
     print('\n Printing doubly linked list:')
     for elm in doubly_linkedlist.traverse():
@@ -48,7 +49,16 @@ if __name__ == '__main__':
     for elm in doubly_linkedlist.reverse_traverse():
         print(elm)
 
-    print(doubly_linkedlist.remove(34))
+    # print(doubly_linkedlist.remove(34))
+    #
+    # print('\n Printing doubly linked list:')
+    # for elm in doubly_linkedlist.traverse():
+    #     print(elm)
+
+    print(f'Size of the list {doubly_linkedlist.length}')
+    order = 3
+    print('\n Remove the {} node from reverse'.format(order))
+    doubly_linkedlist.remove_from_reverse(order)
 
     print('\n Printing doubly linked list:')
     for elm in doubly_linkedlist.traverse():
