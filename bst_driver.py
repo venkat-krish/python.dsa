@@ -18,3 +18,6 @@ if __name__ == '__main__':
 
     print(f'The min value of BST is {bst.findMin(bst.root)}')
     print(f'The max value of BST is {bst.findMax(bst.root)}')
+
+    value = 31
+    print(f'The node found for the value {value}, { bst.findNode(bst.root, value) }')

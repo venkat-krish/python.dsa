@@ -88,3 +88,22 @@ class BinarySearchTree:
             return current.data
 
         return self.findMax(current.right)
+
+
+    def findNode(self, current, value):
+        '''
+        Value is the value of the node
+        :param value:
+        :return: a reference of the found node will be returned
+        '''
+        if current is None:
+            return None
+
+        if current.data == value:
+            return current
+        elif value < current.data:
+            return self.findNode(current.left, value)
+        else:
+            return self.findNode(current.right, value)
+
+    # def remove(self, ):
