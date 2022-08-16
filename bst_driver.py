@@ -21,3 +21,7 @@ if __name__ == '__main__':
 
     value = 31
     print(f'The node found for the value {value}, { bst.findNode(bst.root, value) }')
+
+    print('\n Bredth first search traversal')
+    visited = bst.bredthFirst(bst.root)
+    print(visited)

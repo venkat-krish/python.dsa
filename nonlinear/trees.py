@@ -1,4 +1,4 @@
-
+from collections import deque
 
 class Node:
     def __init__(self, data):
@@ -106,4 +106,18 @@ class BinarySearchTree:
         else:
             return self.findNode(current.right, value)
 
-    # def remove(self, ):
+    def bredthFirst(self, current):
+        que = deque()
+        visited = []
+        while current != None:
+            visited.append(current.data)
+            if current.left != None:
+                que.append(current.left)
+            if current.right != None:
+                que.append(current.right)
+            if que:
+                current = que.popleft()
+            else:
+                current = None
+        return visited
+
