@@ -23,6 +23,10 @@ class Heap:
         self.heap[left], self.heap[right] = self.heap[right], self.heap[left]
 
     def display(self):
+        '''
+        Displays the items of the heap
+        :return:
+        '''
         for i in self.heap:
             print(i)
 
